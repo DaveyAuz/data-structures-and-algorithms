@@ -25,14 +25,18 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
+
   starWarsArr.sort((a, b) => b.height - a.height);
   return starWarsArr;
 };
+
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
 Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index.
 ------------------------------------------------------------------------------------------------ */
+
 
 function removeThree(idx, arr) {
   arr.splice(idx, 3);
@@ -354,5 +358,5 @@ xdescribe('Testing challenge 13', () => {
 
     expect(extractVowels('The quick brown fox')).toStrictEqual(['Th qck brwn fx', 'eioou']);
   });
-});
+
 
