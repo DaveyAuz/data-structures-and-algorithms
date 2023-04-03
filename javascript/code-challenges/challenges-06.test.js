@@ -129,7 +129,9 @@ describe('Testing challenge 1', () => {
 });
 
 describe('Testing challenge 2', () => {
+
   test('It should append without modifying the original', () => {
+
     const a = 'This is my story.';
     const b = appendTheEnd(a);
 
@@ -139,7 +141,9 @@ describe('Testing challenge 2', () => {
 });
 
 describe('Testing challenge 3', () => {
+
   test('It should append by modifying the original', () => {
+
     const a = ['Yes', 'it', 'is'];
     appendFirstToLast(a);
 
@@ -156,7 +160,9 @@ describe('Testing challenge 4', () => {
   });
 });
 
+
 describe('Testing challenge 5', () => {
+
   test('It should add a property to every object in an array', () => {
     const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
     setStatusAsAuthor(a);
@@ -167,7 +173,9 @@ describe('Testing challenge 5', () => {
   });
 });
 
+
 describe('Testing challenge 6', () => {
+
   test('It should append the second array to the first', () => {
     const a = [1, 2, 3, 4];
     const b = [5, 6, 7, 8];
