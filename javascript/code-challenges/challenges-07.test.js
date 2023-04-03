@@ -26,13 +26,9 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-  function sortStarWarsCharacters(characters) {
-    characters.sort((a, b) => b.height - a.height);
-    return characters;
-  }
-  let sortedCharacters = sortStarWarsCharacters(starWarsPeople);
-  console.log(sortedCharacters);
-}
+  starWarsArr.sort((a, b) => b.height - a.height);
+  return starWarsArr;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
