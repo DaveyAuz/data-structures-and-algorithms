@@ -53,18 +53,22 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  // Solution code here...
+  const newArr = charArray.sort((a, b) => a.name - b.name ? 1 : -1);
+  return newArr.sort((a, b) => a.children.length - b.children.length);
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
+
+Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not.
+
 
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
-  // Solution code here...
+  let regex = /w/g;
+  return regex.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,7 +84,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  let regexPattern = /[0-9]/g;
+  return regexPattern.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,7 +96,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+  let regexPattern = /world/g;
+  return regexPattern.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,11 +105,15 @@ CHALLENGE 5
 
 Write a function named isCapitalized that takes in a string. This function should use a regular expression pattern to match all words that begin with a capital letter. It should only match words, not punctuation.
 
+
+
 Return an array containing all the matches.
+
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let regexPattern = /[A-Z]\w+/g;
+  return str.match(regexPattern) || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,7 +123,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let regexPattern = /^[A-J]/;
+  let cityArray = [];
+  arr.forEach((city) => {
+    if (regexPattern.test(city)) {
+      cityArray.push(city);
+    }
+  });
+  return cityArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,11 +142,14 @@ Write a function named matchMonth which uses a regular expression pattern to mat
 
 If the user enters any of these four inputs, return true. For any other input, return false.
 
-Do not use the vertical bar (pipe) in your pattern.
+
+Do not use the vertical bar (pipe) in your pattern. COMMENTS:
 ------------------------------------------------------------------------------------------------ */
+
 
 const matchMonth = (input) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
