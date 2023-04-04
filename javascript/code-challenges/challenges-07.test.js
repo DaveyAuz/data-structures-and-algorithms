@@ -359,4 +359,4 @@ xdescribe('Testing challenge 13', () => {
     expect(extractVowels('The quick brown fox')).toStrictEqual(['Th qck brwn fx', 'eioou']);
   });
 
-
+});
