@@ -1,4 +1,3 @@
-
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -58,10 +57,15 @@ const sortByChildren = (charArray) => {
   return newArr.sort((a, b) => a.children.length - b.children.length);
 };
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
+
+
+
 Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not.
+
 
 ------------------------------------------------------------------------------------------------ */
 
@@ -104,7 +108,10 @@ CHALLENGE 5
 
 Write a function named isCapitalized that takes in a string. This function should use a regular expression pattern to match all words that begin with a capital letter. It should only match words, not punctuation.
 
-Return an array containing all the matches. CHANGE for GIT commit
+
+
+Return an array containing all the matches.
+
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
@@ -138,10 +145,13 @@ Write a function named matchMonth which uses a regular expression pattern to mat
 
 If the user enters any of these four inputs, return true. For any other input, return false.
 
+
 Do not use the vertical bar (pipe) in your pattern. COMMENTS:
 ------------------------------------------------------------------------------------------------ */
 
+
 const matchMonth = (input) => {
+  // Solution code here...
 
 };
 

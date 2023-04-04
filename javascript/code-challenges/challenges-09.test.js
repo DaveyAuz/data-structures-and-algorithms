@@ -27,6 +27,7 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
+
 const courseInfo = {
   name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
@@ -45,6 +46,7 @@ Write a function named checkValues that takes in an object and a value and retur
 
 
 ------------------------------------------------------------------------------------------------ */
+
 
 const checkValues = (obj, value) => {
   return (Object.values(obj)).includes(value);
@@ -71,10 +73,24 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
+
   let newData = [];
   Object.keys(obj).forEach((key) => { newData.push(`${key}: ${obj[key]}`); });
   return newData;
+
+
+  let result = [];
+  for (let key in obj) {
+    let name = key;
+    let phoneNumber = obj[key];
+    result.push(`${name}: ${phoneNumber}`);
+  }
+  return result;
+
 };
+
+
+
 
 
 
@@ -133,6 +149,12 @@ const getHouses = (arr) => {
     houses.push(e.house);
 
   }
+
+
+  arr.forEach(person => {
+    houses.push(person.house);
+  });
+
   return houses;
 };
 
@@ -150,6 +172,7 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
 
+
   let hasChildren = false;
   arr.forEach(person => {
     if(person.name === character){
@@ -159,6 +182,19 @@ const hasChildrenValues = (arr, character) => {
     }
   });
   return hasChildren;
+
+
+  let hasChildren = false;
+  arr.forEach(person => {
+    if (person.name === character){
+      let values = Object.values(person);
+      values.length === 4 ? hasChildren = true : hasChildren;
+    }
+  });
+  return hasChildren;
+
+  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
