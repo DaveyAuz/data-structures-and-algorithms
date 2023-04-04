@@ -147,12 +147,7 @@ const getHouses = (arr) => {
   let houses = [];
   for (let e of arr) {
     houses.push(e.house);
-
   }
-  arr.forEach(person => {
-    houses.push(person.house);
-  });
-
   return houses;
 };
 
