@@ -25,7 +25,7 @@ CHALLENGE 2
 
 Write a function named getCourseKeys that takes in the courseInfo object and returns an array containing the keys for the courseInfo object.
 
-For example: (['name', 'duration', 'topics', 'finalExam']).
+For example: (['name', 'duration', 'topics', 'finalExam']). CHANGE
 ------------------------------------------------------------------------------------------------ */
 const courseInfo = {
   name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
@@ -170,7 +170,7 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  
+
 };
 
 /* ------------------------------------------------------------------------------------------------
