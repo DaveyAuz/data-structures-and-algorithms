@@ -149,8 +149,6 @@ const getHouses = (arr) => {
     houses.push(e.house);
 
   }
-
-
   arr.forEach(person => {
     houses.push(person.house);
   });
@@ -182,19 +180,6 @@ const hasChildrenValues = (arr, character) => {
     }
   });
   return hasChildren;
-
-
-  let hasChildren = false;
-  arr.forEach(person => {
-    if (person.name === character){
-      let values = Object.values(person);
-      values.length === 4 ? hasChildren = true : hasChildren;
-    }
-  });
-  return hasChildren;
-
-  // Solution code here...
-
 };
 
 /* ------------------------------------------------------------------------------------------------
