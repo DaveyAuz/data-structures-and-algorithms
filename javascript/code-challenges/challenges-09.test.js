@@ -9,21 +9,16 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-
-  let highestVal = arr.reduce((acc, currVal) => {
-    if (acc > currVal) {
+  let highestVal = arr.reduce((acc, curVal) => {
+    if (acc > curVal) {
       return acc;
     } else {
-      return currVal;
+      return curVal;
     }
   });
   return highestVal;
-
-
-  let bigNum = arr.reduce((acc, curVal) => Math.max(acc, curVal));
-  return bigNum;
-
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -33,18 +28,15 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
 
-
-
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
-
+const courseInfo = {
+  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
 
 const getCourseKeys = (obj) => {
-
-  return Object.keys(obj);
-
+  let keys = Object.keys(obj);
+  return keys;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,27 +49,9 @@ Write a function named checkValues that takes in an object and a value and retur
 
 
 const checkValues = (obj, value) => {
-  for (let key in obj) {
-    if (obj[key] === value) {
-      return true;
-    }
-  }
-  return false;
-
-
-const checkValues = (obj, value) => {
-
-const courseInfo = {
-  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
-  topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
-  finalExam: true
+  return (Object.values(obj)).includes(value);
 };
 
-const getCourseKeys = (obj) => {
-  return Object.keys(obj);
-
-
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -100,6 +74,11 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
 
+  let newData = [];
+  Object.keys(obj).forEach((key) => { newData.push(`${key}: ${obj[key]}`); });
+  return newData;
+
+
   let result = [];
   for (let key in obj) {
     let name = key;
@@ -107,8 +86,6 @@ const updateNumbers = (obj) => {
     result.push(`${name}: ${phoneNumber}`);
   }
   return result;
-
-  // Solution code here...
 
 };
 
@@ -168,12 +145,15 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
+  for (let e of arr) {
+    houses.push(e.house);
+
+  }
+
 
   arr.forEach(person => {
     houses.push(person.house);
   });
-
-  // Solution code here...
 
   return houses;
 };
@@ -192,6 +172,18 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
 
+
+  let hasChildren = false;
+  arr.forEach(person => {
+    if(person.name === character){
+      let values = Object.values(person);
+
+      values.length === 4 ? hasChildren = true : hasChildren;
+    }
+  });
+  return hasChildren;
+
+
   let hasChildren = false;
   arr.forEach(person => {
     if (person.name === character){
@@ -202,7 +194,6 @@ const hasChildrenValues = (arr, character) => {
   return hasChildren;
 
   // Solution code here...
-
 
 };
 
@@ -215,7 +206,7 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
