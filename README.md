@@ -20,4 +20,8 @@ To run your tests
 
 ### 401 Data Structures, Code Challenges
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+TABLE OF CONTENTS:
+Code Challenge 1:
+/home/doswald/projects/courses/code-401/data-structures-and-algorithms/data-structures-and-algorithms/java/datastructures/lib/src/main/java/codechallenges/linkedlist/CodeChallenge01.java
+
+
