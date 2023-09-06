@@ -37,6 +37,8 @@ System.out.println(Arrays.toString(reversedArr3)); // [199, 197, 193, 191, 181, 
 
 
 
+
+
  //INPUT
 // [1, 2, 3, 4, 5, 6]
 // [89, 2354, 3546, 23, 10, -923, 823, -12]
